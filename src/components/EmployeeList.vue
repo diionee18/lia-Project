@@ -1,13 +1,17 @@
 <template>
-    <div>
-        <ul>
-        <li v-for="employee in employees" :key="employee.id" >
-            <img :src="employee.avatar" alt="profilbild" width="50" height="50" style="border-radius: 50%;">
-            {{ employee.first_name }} {{ employee.last_name }}
-            <a :href="'mailto:' + employee.email">Kontakt</a>
-        </li>
+  <div>
+    <ul class="user-wrapper">
+      <li class="users-li" v-for="employee in employees" :key="employee.id">
+        <img class="user-img" :src="employee.avatar" alt="profilbild">
+       <p class="fullname"> {{  employee.first_name }} {{ employee.last_name }} </p>
+        <a :href="'mailto:' + employee.email">Kontakt</a>
+      </li>
     </ul>
-    </div>
+</div>
 </template>
 
-<script src="../utils/EmployeeListScript"></script>
+  <script src="../utils/EmployeeListScript"></script>
+
+  
+  
+  

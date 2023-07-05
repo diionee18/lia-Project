@@ -1,13 +1,27 @@
-import Pagination from 'vue-pagination-2'
 
 export default {
-    components: {
-        Pagination
+    data(){
+        return{
+            employees: [],
+            currentPage: this.intialPage,
+            totalPages: null
+        };
     },
-    props: {
-        intialPage: {
-            type: Number,
-            default: 1,
+
+    mounted() {
+        this.fetchEmployees();
+    },
+    methods: {
+        fetchEmployees() {
+            fetch(`https://reqres.in/api/users?page`)
+            .then(response => response.json())
+            .then(data => {
+                this.employees = data.data;
+                this.totalPages = data.total_pages;
+            })
+            .catch(error => {
+                console.error('Ett fel har inträffat: ' + error)
+            })
         }
-    }
-}
+    },
+};

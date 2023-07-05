@@ -6,5 +6,6 @@ import EmployeeList from './components/EmployeeList.vue';
  <EmployeeList></EmployeeList>
 </template>
 
-<style scoped>
+<style>
+@import "./assets/EmployeeList.css";
 </style>
