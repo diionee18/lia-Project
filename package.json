@@ -8,11 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hennge/vue3-pagination": "^1.0.17",
-    "laravel-vue-pagination": "^4.1.0",
-    "vue": "^3.3.4",
-    "vue-pagination-bootstrap": "^1.0.3",
-    "vuejs-paginate": "^2.1.0"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

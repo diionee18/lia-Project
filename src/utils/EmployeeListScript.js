@@ -1,5 +1,3 @@
-import {getRandomColor} from './RandomColor'
-
 export default {
     data() {
       return {
@@ -22,12 +20,11 @@ export default {
           .then(data => {
             this.employees = data.data.map(employee => ({
               ...employee,
-            //   backgroundColor: getRandomColor()
             }));
             this.totalPages = data.total_pages;
           })
           .catch(error => {
-            console.error('Ett fel har inträffat: ' + error)
+            console.error('Ett fel har inträffat: ' + error.message)
           })
       }
     },
